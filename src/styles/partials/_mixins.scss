@@ -1,0 +1,24 @@
+@import "../partials/variables";
+
+@mixin dropdown-menu-default {
+    background-color: black;
+    border-radius: 0;
+}
+
+@mixin dropdown-item-default {
+    background-color: transparent;
+    color: white;
+
+}
+
+@mixin list-item-default {
+    padding: 0 2rem;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+@mixin list-item-action {
+    background-color: transparent;
+    color: $color-secondary;
+}
