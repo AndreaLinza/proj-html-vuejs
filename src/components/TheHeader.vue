@@ -1,11 +1,13 @@
 <script>
-import Nav from './Nav.vue';
 import TopBanner from './TopBanner.vue';
+import Nav from './Nav.vue';
+import Carousel from './Carousel.vue';
 
 
 export default {
 
     components: {
+        Carousel,
         TopBanner,
         Nav,
     },
@@ -20,10 +22,8 @@ export default {
 <template>
     <header>
         <TopBanner></TopBanner>
-    
         <Nav></Nav>
-        
-
+        <Carousel></Carousel>
     </header>
 </template>
 

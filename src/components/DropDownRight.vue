@@ -47,7 +47,11 @@ export default {
         </a>
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
             <li>
-                <a class="dropdown-item d-flex" href="#">
+                <a class="dropdown-item" href="#">
+                    <div class="d-flex flex-column">
+                        <span class="py-1">User Login</span>
+                        <span class="py-1">Checkout</span>
+                    </div>
                 </a>
             </li>
 
@@ -55,12 +59,12 @@ export default {
     </div>
     <div class="nav-item dropdown dropdown-toggle px-4">
         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i :class="`fa-solid ${dropIcon[2]}`"></i>
+            <i :class="`fa-solid ${dropIcon[2]}`"></i> <span style="color:#F9AA01;">(0) £0.00</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
             <li>
                 <a class="dropdown-item d-flex" href="#">
-
+                    <span class="p-4">No products in the cart.</span>
                 </a>
             </li>
 
@@ -75,11 +79,21 @@ export default {
 
 .dropdown-menu {
     @include mixins.dropdown-menu-default;
+
+    &.show{
+        position: absolute;
+        top:40px;
+        border:1px solid rgba(255, 255, 255, 0.384)
+    }
+
     .dropdown-item {
         @include mixins.dropdown-item-default;
+
+
     }
 }
-.nav-link{
+
+.nav-link {
     &:hover {
         color: $color-secondary
     }
@@ -90,5 +104,4 @@ export default {
         display: none;
     }
 }
-
 </style>

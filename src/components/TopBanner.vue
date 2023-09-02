@@ -74,7 +74,7 @@ export default {
                     </span> -->
                 </div>
 
-                <div>
+                <div class="pt-2">
                     <span>Call 24/7 . 800-8754-987</span>
                 </div>
             </div>
@@ -93,6 +93,7 @@ section {
 
     .btn {
         color: gray;
+        border: 0;
 
         &:hover {
             color: $color-secondary

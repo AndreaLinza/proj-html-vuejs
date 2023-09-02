@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div class="input-group d-flex">
-        <input type="text" class="form-control " placeholder="Search products..." aria-label="Search products..."
+        <input type="text" class="form-control" placeholder="Search products..." aria-label="Search products..."
             aria-describedby="button-addon2">
         <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
                 class="fa-solid fa-magnifying-glass"></i></button>
@@ -22,6 +22,9 @@ export default {
 
 div{
     width: 300px;
+
+    position: relative;
+    top: -11px;
 
     .form-control{
         background-color: $color-primary;
