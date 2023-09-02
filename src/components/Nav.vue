@@ -27,7 +27,7 @@ export default {
 
 <template>
     <nav class="navbar navbar-expand-lg">
-        <div class="container py-2">
+        <div class="container py-2 px-1">
 
             <!-- Logo and hamburger -->
             <div>
@@ -44,8 +44,8 @@ export default {
             <!-- Central-nav  -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
-                    
-                        <NavSelection></NavSelection>
+
+                    <NavSelection></NavSelection>
 
                 </ul>
 
@@ -75,22 +75,9 @@ export default {
             color: white
         }
 
-        li {
-            padding: 0 2rem
-        }
-
-        a {
-            color: $color-text;
-
-            &:hover {
-                color: $color-secondary;
-
-            }
-        }
-
+        
 
     }
 
 }
-
 </style>

@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-    <div class="nav-item dropdown dropdown-toggle px-4">
+    <div class="nav-item dropdown dropdown-toggle px-3">
         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i :class="`fa-solid ${dropIcon[0]}`"></i>
         </a>
@@ -41,7 +41,7 @@ export default {
             </li>
         </ul>
     </div>
-    <div class="nav-item dropdown dropdown-toggle px-4">
+    <div class="nav-item dropdown dropdown-toggle px-3">
         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i :class="`fa-solid ${dropIcon[1]}`"></i>
         </a>
@@ -57,7 +57,7 @@ export default {
 
         </ul>
     </div>
-    <div class="nav-item dropdown dropdown-toggle px-4">
+    <div class="nav-item dropdown dropdown-toggle px-3">
         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i :class="`fa-solid ${dropIcon[2]}`"></i> <span style="color:#F9AA01;">(0) £0.00</span>
         </a>

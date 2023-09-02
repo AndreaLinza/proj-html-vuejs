@@ -39,12 +39,14 @@ div{
     .btn{
         border-radius: 0;
         border-color: rgba(255, 255, 255, 0.384);
-        border-left-color: transparent;
+        border-left-color: $color-primary;
         background-color: $color-primary;
 
         &:hover{
             color: $color-secondary;
         }
+
+
     }
 }
 

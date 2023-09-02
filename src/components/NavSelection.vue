@@ -43,11 +43,19 @@ export default {
 
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 
 .list-group-item{
     @include list-item-default;
+            
+                padding: 0 1.2rem;
+                color: $color-text;
+
+                &:hover {
+                    color: $color-secondary;
+
+                }
+            
 
     &:hover{
         @include list-item-action

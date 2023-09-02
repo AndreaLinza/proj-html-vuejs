@@ -22,3 +22,9 @@
     background-color: transparent;
     color: $color-secondary;
 }
+
+@mixin default-button {
+    color: black;
+    background-color: $color-secondary !important;
+    border-color: $color-secondary !important;
+}

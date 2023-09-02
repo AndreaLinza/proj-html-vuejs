@@ -38,15 +38,21 @@ export default {
 </script>
 
 <template>
-    <section class="py-3">
+    <section class="py-1">
         <div class="container">
             <div class="d-flex justify-content-between">
                 <div class="d-flex align-items-center">
-                    <span class="mx-2">Wishlist (0)</span>
+                    <span class="mx-2">
+                        <small>
+                            Wishlist (0)
+                        </small>
+                    </span>
                     <span class="divider"></span>
                     <span class="btn-group d-flex">
                         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Need Help?
+                            <small>
+                                Need Help ?
+                            </small>
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
                         <ul class="dropdown-menu">
@@ -57,21 +63,6 @@ export default {
                             </li>
                         </ul>
                     </span>
-                    <!-- <span class="mx-2 d-flex">
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
-                                <li v-for="contact in contacts">
-                                    <a class="dropdown-item" href="#"><i :class="`fa-solid ${contact.icon}`"></i>
-                                        {{ contact.number }}</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </span> -->
                 </div>
 
                 <div class="pt-2">
@@ -91,23 +82,8 @@ export default {
 section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.233);
 
-    .btn {
-        color: gray;
-        border: 0;
-
-        &:hover {
-            color: $color-secondary
-        }
-    }
-
-    .divider {
-        border-left: 1px solid rgba(255, 255, 255, 0.212);
-        height: 10px;
-
-    }
-
     span {
-        color: gray;
+        color: rgba(255, 255, 255, 0.623);
 
         &:hover {
             color: $color-secondary
@@ -119,6 +95,23 @@ section {
 
         }
     }
+
+    .btn {
+        color: rgba(255, 255, 255, 0.623);
+        border: 0;
+
+        &:hover {
+            color: $color-secondary
+        }
+    }
+
+    .divider {
+        border-left: 1px solid rgba(255, 255, 255, 0.281);
+        height: 13px; 
+
+    }
+
+
 
     .dropdown-menu {
         @include mixins.dropdown-menu-default;
