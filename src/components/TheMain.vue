@@ -1,6 +1,7 @@
 <script>
 import FirstSection from "./FirstSection.vue";
 import SecondSection from "./SecondSection.vue";
+import ThirdSection from "./ThirdSection.vue";
 
 
 
@@ -13,11 +14,11 @@ export default {
     },
 
     components: {
+    FirstSection,
+    SecondSection,
+    ThirdSection,
 
-        FirstSection,
-        SecondSection
-
-    },
+},
 
 
 }
@@ -29,6 +30,7 @@ export default {
 <template>
     <FirstSection></FirstSection>
     <SecondSection></SecondSection>
+    <ThirdSection></ThirdSection>
     
     
 </template>

@@ -33,7 +33,7 @@ export default {
 <template>
     <section>
         <div class="container">
-            <h2 class="text-center text-light mt-5">Special Category</h2>
+            <h2 class="text-center text-light mt-5 fw-bold fs-1">Special Category</h2>
             <div class="d-flex justify-content-center"><span class="divider"></span></div>
             <div class="row row-cols-3 g-5">
                 <div v-for="category in categorys">
@@ -45,9 +45,6 @@ export default {
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </section>
@@ -59,7 +56,7 @@ export default {
 
 section {
 
-    font-family: $primary-font;
+    font-family: $secondary-font;
     color: white;
 
     .divider{
@@ -76,7 +73,7 @@ section {
         &:hover {
             .hover-category {
 
-                background-color: #1d1427ef;
+                background-color: rgb(23, 15, 32);
                 transition: .5s;
             }
 
@@ -94,7 +91,6 @@ section {
 
         p {
             font-size: 1.5rem;
-            font-family: $secondary-font;
         }
 
         a {

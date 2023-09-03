@@ -39,26 +39,11 @@ export default {
     }
 
     .triangle-left {
-        border-right: 0px solid #f9aa01;
-        border-bottom: 56px solid #f9aa01;
-        border-left: 18px solid transparent;
-        border-top: 17px solid transparent;
-        position: absolute;
-        left: -18px;
-        top: -15px;
-
-
+        @include leftbanner-triangle-lg;
     }
 
     .triangle-right {
-        border-right: 0px solid #f9aa01;
-        border-bottom: 56px solid #f9aa01;
-        border-left: 18px solid transparent;
-        border-top: 18px solid transparent;
-        position: absolute;
-        transform: rotate(180deg);
-        right: -18px;
-        top: 0;
+        @include rightbanner-triangle-lg;
     }
 }
 </style>

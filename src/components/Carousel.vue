@@ -17,9 +17,9 @@ export default {
 
         <TriangleTopBanner></TriangleTopBanner>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active cursor-grab">
                 <img src="/red-dead-jumbo.jpg" class="d-block w-100" alt="Red-dead-redemption">
-                <h2> Read Dead <br> Redemption 2</h2>
+                <h2>Read Dead <br> Redemption 2</h2>
             </div>
             <div class="carousel-item">
                 <img src="/hogwarts-legacy.jpg" class="d-block w-100" alt="Howarts-Legacy">
@@ -57,7 +57,7 @@ export default {
         position: absolute;
         text-align: center;
         top: 35%;
-        right: 15%;
+        right: 18%;
         font-family: $secondary-font;
         font-weight: 900;
 
