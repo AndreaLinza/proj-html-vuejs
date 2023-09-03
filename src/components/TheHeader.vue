@@ -34,7 +34,5 @@ header {
     background-color: $color-primary;
     color: $color-text;
     font-family: $primary-font;
-
-    
 }
 </style>

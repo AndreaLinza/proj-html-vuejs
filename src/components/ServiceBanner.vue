@@ -59,6 +59,7 @@ export default {
 
 section {
     color: white;
+    font-family: $primary-font;
 
     .description {
         &:hover {
@@ -72,6 +73,7 @@ section {
         .service-img {
             padding-right: 1rem;
             height: 50px;
+            width: 100px;
 
             overflow-y: hidden;
 
@@ -93,6 +95,7 @@ section {
         .service-img {
             padding-right: 1rem;
             height: 50px;
+            width: 100px;
             overflow-y: hidden;
 
             img {
@@ -113,6 +116,7 @@ section {
         .service-img {
             padding-right: 1rem;
             height: 50px;
+            width: 100px;
             overflow-y: hidden;
 
             img {
@@ -133,6 +137,7 @@ section {
         .service-img {
             padding-right: 1rem;
             height: 50px;
+            width: 100px;
             overflow-y: hidden;
 
             img {

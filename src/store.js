@@ -7,6 +7,10 @@ export const store = reactive({
     data() {
         return {
 
+                //title:'Most Popular',
+                // title:'Latest Game'
+            
+
 
             // CONTROLLARE A FINE PROGETTO PERCHè NON VA
 

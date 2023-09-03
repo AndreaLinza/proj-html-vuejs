@@ -19,11 +19,11 @@ export default {
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="/red-dead-jumbo.jpg" class="d-block w-100" alt="Red-dead-redemption">
-                <h2 class="text-center"> Read Dead <br> Redemption 2</h2>
+                <h2> Read Dead <br> Redemption 2</h2>
             </div>
             <div class="carousel-item">
                 <img src="/hogwarts-legacy.jpg" class="d-block w-100" alt="Howarts-Legacy">
-                <h2 class="my-position">Hogwarts Legacy</h2>
+                <h2 class="my-position">Hogwarts <br>Legacy</h2>
             </div>
         </div>
         <button type="button" class="btn  shop-btn"><small>Shop Now</small></button>
@@ -55,16 +55,17 @@ export default {
     h2 {
         font-size: 4.5rem;
         position: absolute;
+        text-align: center;
         top: 35%;
-        right: 20%;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        z-index: 1;
+        right: 15%;
+        font-family: $secondary-font;
+        font-weight: 900;
 
     }
 
     .my-position {
         position: absolute;
-        right: 15%;
+        right: 22%;
     }
 
 }
