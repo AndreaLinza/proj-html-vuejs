@@ -28,3 +28,8 @@
     background-color: $color-secondary !important;
     border-color: $color-secondary !important;
 }
+
+@mixin default-banner{
+    background-repeat: no-repeat;
+    background-size: contain;
+}

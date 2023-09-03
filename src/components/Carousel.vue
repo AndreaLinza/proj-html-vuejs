@@ -50,6 +50,7 @@ export default {
 .carousel-item {
 
     position: relative;
+    padding-top: 4rem;
 
     h2 {
         font-size: 4.5rem;
@@ -71,7 +72,7 @@ export default {
 .shop-btn {
     position: absolute;
     padding: 0.4rem 1.5rem;
-    z-index: 999;
+    z-index: 5;
     bottom: 26%;
     right: 30%;
     border-radius: 0;

@@ -16,9 +16,7 @@ export default {
                 'Feature',
             ],
 
-            section: [
 
-            ]
 
 
         }
@@ -33,8 +31,7 @@ export default {
 <template>
     <div class="list-group">
         <li class="d-flex">
-            <a href="#" class="list-group-item list-group-item-action" aria-current="true" 
-            v-for="navLink in navLinks">
+            <a href="#" class="list-group-item list-group-item-action" aria-current="true" v-for="navLink in navLinks">
                 {{ navLink }}
             </a>
         </li>
@@ -45,42 +42,42 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/mixins" as *;
 
-.list-group-item{
-    @include list-item-default;
-            
-                padding: 0 1.2rem;
-                color: $color-text;
+.list-group {
+    .list-group-item {
+        @include list-item-default;
 
-                &:hover {
-                    color: $color-secondary;
+        padding: 0 1.2rem;
+        color: $color-text;
 
-                }
-            
+        &:hover {
+            color: $color-secondary;
 
-    &:hover{
-        @include list-item-action
+        }
 
+
+        &:hover {
+            @include list-item-action
+        }
+
+        &:focus {
+            @include list-item-action
+        }
     }
-    &:focus{
-        @include list-item-action
 
+    .btn {
+        background-color: transparent;
+        border: 0;
+
+        &:hover {
+            @include list-item-action
+        }
     }
-}
 
-.btn {
-    background-color: transparent;
-    border: 0;
+    .dropdown-toggle {
 
-    &:hover {
-        @include list-item-action
-
-    }
-}
-
-.dropdown-toggle {
-
-    &:after {
-        display: none;
+        &:after {
+            display: none;
+        }
     }
 }
 </style>

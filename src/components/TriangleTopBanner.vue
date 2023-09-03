@@ -5,6 +5,12 @@ export default {
     data() {
         return {
 
+            text:[
+                'Upcoming Stock',
+                'Most Popular',
+                'Latest Game'
+            ]
+
         }
     }
 
@@ -15,7 +21,7 @@ export default {
 <template>
     <div class="banner d-flex">
         <div class="triangle-left"></div>
-        <strong class="text-banner">Upcoming Stock</strong>
+        <strong class="text-banner">{{text[0]}}</strong>
         <span class="triangle-right"></span>
     </div>
 </template>
@@ -43,7 +49,7 @@ export default {
         border-top: 17px solid transparent;
         position: absolute;
         left: -18px;
-        top: -16px;
+        top: -15px;
 
 
     }
