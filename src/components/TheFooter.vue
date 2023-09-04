@@ -1,96 +1,95 @@
 <script>
-export default {
+import BrandCarousel from './BrandCarousel.vue';
 
+
+export default {
+    components: { BrandCarousel }
 }
 
 </script>
 
 
 <template>
-    <div id="carouselExampleAutoplaying" class="carousel slide position-relative" data-bs-ride="carousel">
+    <BrandCarousel></BrandCarousel>
 
-        <div class="carousel-inner">
-            <div class="carousel-item active cursor-grab">
-                <img src="/red-dead-jumbo.jpg" class="d-block w-100" alt="Red-dead-redemption">
-                <h2>Read Dead <br> Redemption 2</h2>
+    <section class="pt-5 mt-5">
+        <div class="container">
+            <div class="row pt-5 text-light">
+                <div class="col-3">
+                    <h5 class="fw-bold">Address info</h5>
+                    <p><i class="fa-solid fa-location-dot" style="color: #f9aa01; width: 10px;"></i> Lorem ipsum dolor
+                        sit, amet consectetur adipisicing elit. Odit dolore aut rem corrupti libero corporis sapiente
+                        architecto saepe consequatur deserunt ad quidem quod, sit explicabo ipsum possimus? Vero, quas
+                        in!</p>
+                    <p><i class="fa-solid fa-phone" style="color: #f9aa01;"></i> 000000000</p>
+                    <p><i class="fa-solid fa-envelope" style="color: #f9aa01;"></i> ancascjac@gmial</p>
+                </div>
+                <div class="col-3">
+                    <h5 class="fw-bold ps-3">Information</h5>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            The current link item
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link
+                            item</a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h5 class="fw-bold ps-3">Information</h5>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            The current link item
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link
+                            item</a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h5 class="fw-bold ps-3">Information</h5>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            The current link item
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link
+                            item</a>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="/hogwarts-legacy.jpg" class="d-block w-100" alt="Howarts-Legacy">
-                <h2 class="my-position">Hogwarts <br>Legacy</h2>
-            </div>
+
         </div>
-        <button type="button" class="btn  shop-btn"><small>Shop Now</small></button>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev">
-            <span><i class="fa-solid fa-chevron-left"></i></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next">
-            <span><i class="fa-solid fa-chevron-right"></i></span>
-            <span class="visually-hidden">Next</span>
-        </button>
 
-
-    </div>
+    </section>
 </template>
 
 
 <style lang="scss" scoped>
 @use "../styles/partials/mixins" as *;
 
-.carousel-item {
+section {
 
-    position: relative;
-    padding-top: 4rem;
+    background-image: url('public/footer-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    h2 {
-        font-size: 4.5rem;
-        position: absolute;
-        text-align: center;
-        top: 35%;
-        right: 18%;
-        font-family: $secondary-font;
-        font-weight: 900;
+    .list-group {
+        border: 0;
 
-    }
-
-    .my-position {
-        position: absolute;
-        right: 22%;
-    }
-
-}
-
-.shop-btn {
-    position: absolute;
-    padding: 0.4rem 1.5rem;
-    z-index: 5;
-    bottom: 26%;
-    right: 30%;
-    border-radius: 0;
-    background-color: white;
-    border-color: white;
-    color: black;
-
-    &:hover {
-        @include default-button
-    }
-
-    &:active {
-        @include default-button
+        .list-group-item {
+            background-color: transparent;
+            color: white;
+            border: 0;
+        }
     }
 
 
-
-}
-
-button {
-    opacity: 1;
-
-    span {
-        font-size: 2.3rem;
-        color: $color-secondary
-    }
 }
 </style>
