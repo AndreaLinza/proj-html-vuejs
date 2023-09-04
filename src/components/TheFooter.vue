@@ -12,7 +12,7 @@ export default {
 <template>
     <BrandCarousel></BrandCarousel>
 
-    <section class="pt-5 mt-5">
+    <footer class="pt-5 mt-5">
         <div class="container">
             <div class="row pt-5 text-light">
                 <div class="col-3">
@@ -60,29 +60,45 @@ export default {
                             <img src="public/newsletter.png" alt="">
                         </button>
                     </div>
-                    <div>
-                        <div class="list-group list-group-horizontal">
-                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-google-plus-g"></i></a>
-                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-skype"></i></a>
-                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
 
+                    <div class="list-group list-group-horizontal">
+                        <a href="#" class="list-group-item list-group-item-action"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="list-group-item list-group-item-action"><i
+                                class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-skype"></i></a>
+                        <a href="#" class="list-group-item list-group-item-action"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
+
                 </div>
             </div>
 
         </div>
+        <div class="w-100 border-top mb-3" style="border-color: rgba(128, 128, 128, 0.541);"></div>
+        <div class="d-flex justify-content-between container">
+            <div>
+                <p class="text-light">Copyright <span><i class="fa-regular fa-copyright"></i></span> 2023 Codezeel</p>
+            </div>
+            <div class="px-3 overflow-hidden payment-span">
+                <img class="px-1 express" src="src/assets/img/payments.png" alt="express">
+                <img class="px-1 discover" src="src/assets/img/payments.png" alt="discover">
+                <img class="px-1 master" src="src/assets/img/payments.png" alt="master">
+                <img class="px-1 paypal" src="src/assets/img/payments.png" alt="paypal">
+                <img class="px-1 visa" src="src/assets/img/payments.png" alt="visa">
+                
+            </div>
+        </div>
 
-    </section>
+    </footer>
 </template>
 
 
 <style lang="scss" scoped>
 @use "../styles/partials/mixins" as *;
 
-section {
+footer {
 
     background-image: url('public/footer-bg.png');
     background-size: cover;
@@ -118,5 +134,24 @@ section {
 
     }
 
-}
-</style>
+    .payment-span{
+        height: 30px;
+        
+        .express{
+            transform: translateY(-236px);
+        }
+        .discover{
+            transform: translateY(-196px);
+
+        }
+        .master{
+            transform: translateY(-38px);
+        }
+        .paypal{
+            transform: translateY(-115px);
+        }
+
+    
+    }
+
+}</style>
