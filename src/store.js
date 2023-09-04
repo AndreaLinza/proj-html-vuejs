@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 
 
-export const store = reactive({
+export default {
 
 
     data() {
@@ -54,4 +54,4 @@ export const store = reactive({
     }
 
 
-})
+}

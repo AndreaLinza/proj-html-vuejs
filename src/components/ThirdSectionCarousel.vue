@@ -201,6 +201,7 @@ export default {
 @use "../styles/partials/mixins" as *;
 
 .slider {
+    margin-bottom: 2rem;
     color: white;
     font-family: $secondary-font;
     position: relative;

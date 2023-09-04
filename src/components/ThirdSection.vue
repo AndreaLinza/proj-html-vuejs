@@ -1,13 +1,13 @@
 <script>
-import FirstSectionCarousel from './FirstSectionCarousel.vue';
+import ThirdSectionCarousel from './ThirdSectionCarousel.vue';
 
 
 
 export default {
 
 
-    components:{
-        FirstSectionCarousel
+    components: {
+        ThirdSectionCarousel
     },
 
     data() {
@@ -21,6 +21,19 @@ export default {
                 'New Arrival',
                 'Best Sellers'
 
+            ],
+            sliders:[
+                {
+                    img_slider:'cms-banner-03.jpg',
+                    discount_banner: '20% Discount',
+                    title_game:"Dragon's Dogma Video Game"
+
+                },
+                {
+                    img_slider:'cms-banner-04.jpg',
+                    discount_banner: 'Latest Game',
+                    title_game:"World Of Tanks New Game"
+                }
             ]
 
 
@@ -41,8 +54,20 @@ export default {
                 <a href="#" class="list-group-item" v-for="item in list">{{ item }}</a>
 
             </div>
-            <FirstSectionCarousel></FirstSectionCarousel>
-            
+            <ThirdSectionCarousel></ThirdSectionCarousel>
+        </div>
+        <div class="container my-5">
+            <div class="banner-box">
+                <div class="banner-img" v-for="slider in sliders">
+                    <img :src="`${slider.img_slider}`" alt="">
+                    <div class="banner d-flex">
+                        <div class="triangle-left"></div>
+                        <strong class="text-banner">{{ slider.discount_banner }}</strong>
+                        <span class="triangle-right"></span>
+                    </div>
+                    <p class="text-img">{{ slider.title_game }}</p>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -84,6 +109,64 @@ section {
         }
     }
 
-    
+    .banner-box {
+        display: flex;
+        gap: 2rem;
+        position: relative;
+        font-family: 'Oxanium', cursive;
+
+        .banner-img {
+            width: calc(100% / 2 - 1rem);
+            position: relative;
+            overflow: hidden;
+
+            .text-img {
+                position: absolute;
+                top: 35%;
+                width: 45%;
+                right: 5%;
+                font-size: 2.3rem;
+                font-weight: 900;
+                color: white;
+
+            }
+
+
+            img {
+                width: 100%;
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.10);
+                }
+            }
+        }
+    }
+
+    .banner {
+        position: absolute;
+        z-index: 5;
+        background-color: $color-secondary;
+        top: 15%;
+        right: 15%;
+
+        .text-banner {
+            font-style: italic;
+            padding: 0 .3rem;
+            font-size: 2rem;
+            color: black;
+        }
+
+        .triangle-left {
+            @include leftbanner-triangle-md;
+
+        }
+
+        .triangle-right {
+            @include rightbanner-triangle-md;
+        }
+    }
+
+
 }
 </style>

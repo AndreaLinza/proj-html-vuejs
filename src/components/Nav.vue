@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store';
+
 import DropDownRight from './DropDownRight.vue';
 import NavSelection from './NavSelection.vue';
 
@@ -14,7 +14,7 @@ export default {
     data() {
         return {
 
-            store,
+           
 
         }
     }

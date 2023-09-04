@@ -45,7 +45,6 @@ export default {
                 </div>
                 <p class="text-img">{{slider.title_game}}</p>
             </div>
-
         </div>
     </section>
 </template>
@@ -97,6 +96,7 @@ export default {
 
     .text-banner {
         font-style: italic;
+        padding: 0 .3rem;
         font-size: 2rem;
         color: black;
     }
