@@ -27,40 +27,48 @@ export default {
                 <div class="col-3">
                     <h5 class="fw-bold ps-3">Information</h5>
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                            The current link item
+                        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            Bookmark
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-                        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-                        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link
-                            item</a>
+                        <a href="#" class="list-group-item list-group-item-action">Features</a>
+                        <a href="#" class="list-group-item list-group-item-action">Sitemap</a>
+                        <a href="#" class="list-group-item list-group-item-action">Lists</a>
+                        <a href="#" class="list-group-item list-group-item-action">Contact Us</a>
                     </div>
                 </div>
                 <div class="col-3">
-                    <h5 class="fw-bold ps-3">Information</h5>
+                    <h5 class="fw-bold ps-3">Extras</h5>
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                            The current link item
+                        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            Delivery
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-                        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-                        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link
-                            item</a>
+                        <a href="#" class="list-group-item list-group-item-action">Cart</a>
+                        <a href="#" class="list-group-item list-group-item-action">Terms conditions</a>
+                        <a href="#" class="list-group-item list-group-item-action">My Account</a>
+                        <a href="#" class="list-group-item list-group-item-action">About us</a>
                     </div>
                 </div>
                 <div class="col-3">
-                    <h5 class="fw-bold ps-3">Information</h5>
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                            The current link item
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-                        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-                        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link
-                            item</a>
+                    <h5 class="fw-bold">Our Newsletter</h5>
+
+                    <span>There are many variations of passanges of form humour or randomised</span>
+
+                    <div class="my-5 d-flex">
+                        <input type="email" class="form-control border-0 rounded-0" id="exampleFormControlInput1"
+                            placeholder="">
+                        <button type="button" class="btn btn-light rounded-0">
+                            <img src="public/newsletter.png" alt="">
+                        </button>
+                    </div>
+                    <div>
+                        <div class="list-group list-group-horizontal">
+                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-skype"></i></a>
+                            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -87,9 +95,28 @@ section {
             background-color: transparent;
             color: white;
             border: 0;
+
+            &:hover {
+                color: $color-secondary;
+            }
         }
     }
 
+    .btn-light {
+        background-color: white;
+        border: 0;
+        height: 37px;
+        overflow-y: hidden;
+
+        img {
+            transform: translateY(3px);
+
+            &:hover {
+                transform: translateY(-61px);
+            }
+        }
+
+    }
 
 }
 </style>
