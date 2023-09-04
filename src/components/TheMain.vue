@@ -4,6 +4,7 @@ import SecondSection from "./SecondSection.vue";
 import ThirdSection from "./ThirdSection.vue";
 import FourthSection from "./FourthSection.vue";
 import FifthSection from "./FifthSection.vue";
+import SixthSection from "./SixthSection.vue";
 
 
 
@@ -20,7 +21,8 @@ export default {
     SecondSection,
     ThirdSection,
     FourthSection,
-    FifthSection
+    FifthSection,
+    SixthSection
 },
 
 
@@ -36,6 +38,7 @@ export default {
     <ThirdSection></ThirdSection>
     <FourthSection></FourthSection>
     <FifthSection></FifthSection>
+    <SixthSection></SixthSection>
     
 </template>
 

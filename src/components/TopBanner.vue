@@ -81,6 +81,11 @@ export default {
 
 section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+    background-color: $color-primary;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
 
     span {
         color: rgba(255, 255, 255, 0.623);

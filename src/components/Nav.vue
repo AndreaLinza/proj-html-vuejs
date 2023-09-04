@@ -14,7 +14,6 @@ export default {
     data() {
         return {
 
-           
 
         }
     }
@@ -67,6 +66,7 @@ export default {
 .navbar {
     background-color: $color-primary;
     position: fixed;
+    top:45px;
     width: 100%;
     z-index: 100;
     box-shadow: 10px 2px #8888886e;

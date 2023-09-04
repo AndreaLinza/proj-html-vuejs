@@ -112,9 +112,6 @@ export default {
     },
 
     computed: {
-
-
-
         visibleProduct() {
             const startIndex = this.currentIndex;
             const endIndex = startIndex + this.itemsForPage;

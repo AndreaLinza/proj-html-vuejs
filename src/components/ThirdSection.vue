@@ -1,5 +1,5 @@
 <script>
-import ThirdSectionCarousel from './ThirdSectionCarousel.vue';
+import Carousel from './Carousel.vue';
 
 
 
@@ -7,7 +7,7 @@ export default {
 
 
     components: {
-        ThirdSectionCarousel
+        Carousel
     },
 
     data() {
@@ -54,7 +54,7 @@ export default {
                 <a href="#" class="list-group-item" v-for="item in list">{{ item }}</a>
 
             </div>
-            <ThirdSectionCarousel></ThirdSectionCarousel>
+            <Carousel></Carousel>
         </div>
         <div class="container my-5">
             <div class="banner-box">

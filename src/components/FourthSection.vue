@@ -1,5 +1,5 @@
 <script>
-import ThirdSectionCarousel from './ThirdSectionCarousel.vue';
+import Carousel from './Carousel.vue';
 import { reactive, watch } from 'vue';
 
 
@@ -8,7 +8,7 @@ export default {
 
 
     components: {
-        ThirdSectionCarousel,
+        Carousel,
 
     },
     data() {
@@ -87,7 +87,7 @@ export default {
             <div class="list-group list-group-horizontal">
                 <a href="#" class="list-group-item" v-for="el in state.countDown">{{ el.time }} {{ el.name }}</a>
             </div>
-            <ThirdSectionCarousel></ThirdSectionCarousel>
+            <Carousel></Carousel>
         </div>
     </section>
 </template>
