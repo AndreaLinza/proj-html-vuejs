@@ -73,12 +73,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as *;
-@use "../styles/partials/mixins";
+@use "../styles/partials/mixins" as *;
 
 
 .dropdown-menu {
-    @include mixins.dropdown-menu-default;
+    @include dropdown-menu-default;
 
     &.show{
         position: absolute;
@@ -87,8 +86,13 @@ export default {
     }
 
     .dropdown-item {
-        @include mixins.dropdown-item-default;
+        @include dropdown-item-default;
 
+        span{
+            &:hover{
+                color:$color-secondary;
+            }
+        }
 
     }
 }

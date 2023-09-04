@@ -125,8 +125,6 @@ export default {
         starsVote(z) {
 
             const starsTot = 5
-
-
             const starVote = (z / starsTot) * 100
 
             return starVote

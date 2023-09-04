@@ -31,7 +31,7 @@ export default {
                 },
                 {
                     img_slider:'cms-banner-04.jpg',
-                    discount_banner: 'Latest Game',
+                    discount_banner: '30% Discount',
                     title_game:"World Of Tanks New Game"
                 }
             ]
