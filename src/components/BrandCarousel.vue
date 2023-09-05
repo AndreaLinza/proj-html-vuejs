@@ -25,14 +25,14 @@ export default {
                 },
                 {
                     img_brand: "brand-01.png",
-                },
+                }
             ],
 
         }
 
     },
     computed: {
-        visibleProduct() {
+        visibleBanner() {
             const startIndex = this.currentIndex;
             const endIndex = startIndex + this.itemsForPage;
             return this.img.slice(startIndex, endIndex);
@@ -40,15 +40,15 @@ export default {
     },
     methods: {
         prevSlide() {
-            const maxPage = this.img.length - 5
+
 
             if (this.currentIndex > 0) {
                 this.currentIndex--;
             }
         },
         nextSlide() {
-            const maxPage = this.img.length - 5
-            if (this.currentIndex < maxPage) {
+            const maxIndex = this.img.length - this.itemsForPage
+            if (this.currentIndex < maxIndex) {
                 this.currentIndex++;
             }
         }
@@ -60,7 +60,7 @@ export default {
 
 <template>
     <div class="slider container">
-        <div class=" slider row row-cols-lg-4 row-cols-md-2 g-4 mt-4" v-for="(brand, index) in img" :key="index">
+        <div class="row row-cols-lg-4 row-cols-md-2 g-4 mt-4" v-for="(brand, index) in visibleBanner" :key="index">
             <div class="category-card " :class="{ active: index === 0 }">
                 <img :src="`${brand.img_brand} `" class="d-block" alt="">
             </div>
