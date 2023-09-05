@@ -2,11 +2,36 @@
 
 export default {
 
+    data() {
+        return {
+            personal: [
+                {
+                    icon: "t5-1-100x100_left.jpg",
+                    name: "Luies Charls",
+                    job: "(Web Desiner)",
+                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vero atque dolorem placeat.Repudiandae reiciendis laborum nulla veritatis, sequi suscipit incidunt quas quidem. Molestias, doloribus nisi. Impedit vero sint quam!"
+                },
+                {
+                    icon: "t4-1-100x100_left.jpg",
+                    name: "Din Desuza",
+                    job: "(Iphone Developer)",
+                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vero atque dolorem placeat.Repudiandae reiciendis laborum nulla veritatis, sequi suscipit incidunt quas quidem. Molestias, doloribus nisi. Impedit vero sint quam!"
+                },
+                {
+                    icon: "t2-1-100x100_left.jpg",
+                    name: "Reema Ghurde",
+                    job: "(Senior Manager)",
+                    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vero atque dolorem placeat.Repudiandae reiciendis laborum nulla veritatis, sequi suscipit incidunt quas quidem. Molestias, doloribus nisi. Impedit vero sint quam!"
+                }
+            ]
+        }
+    }
+
 }
 </script>
 
 <template>
-    <section>
+    <section class="pb-4">
 
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
@@ -17,37 +42,19 @@ export default {
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
+            <div class="carousel-inner container">
+                <div class="carousel-item" 
+                v-for="(person, index) in personal" 
+                :key="index"
+                :class="{ active : index === 0}">
                     <div class="quote"></div>
-                    <img src="t5-1-100x100_left.jpg" class="d-block profile-pic" alt="pic-1">
+                    <img :src="`${person.icon}`" class="d-block profile-pic" alt="pic-1">
                     <div class="description-profile">
-                        <p>Luies Charls <span style="color: #f9aa01;">(Web Desiner)</span></p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vero atque dolorem placeat.
-                            Repudiandae reiciendis laborum nulla veritatis, sequi suscipit incidunt quas quidem. Molestias,
-                            doloribus nisi. Impedit vero sint quam!</p>
+                        <p>{{ person.name }} <span style="color: #f9aa01;">{{ person.job }}</span></p>
+                        <p>{{ person.description }}</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="quote"></div>
-                    <img src="t4-1-100x100_left.jpg" class="d-block profile-pic" alt="pic-2">
-                    <div class="description-profile">
-                        <p>Din Desuza <span>(Iphone Developer)</span></p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vero atque dolorem placeat.
-                            Repudiandae reiciendis laborum nulla veritatis, sequi suscipit incidunt quas quidem. Molestias,
-                            doloribus nisi. Impedit vero sint quam!</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="quote"></div>
-                    <img src="t2-1-100x100_left.jpg" class="d-block profile-pic" alt="pic-3">
-                    <div class="description-profile">
-                        <p>Reema Ghurde <span>(Senior Manager)</span></p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vero atque dolorem placeat.
-                            Repudiandae reiciendis laborum nulla veritatis, sequi suscipit incidunt quas quidem. Molestias,
-                            doloribus nisi. Impedit vero sint quam!</p>
-                    </div>
-                </div>
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
@@ -69,6 +76,7 @@ export default {
 
 
 section {
+    background-position: 10%;
     background-image: url('../assets/img/parallax.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,6 +91,7 @@ section {
             margin: 0 .3rem;
 
         }
+
         .active {
 
             background-color: #f9aa01;
@@ -127,7 +136,7 @@ section {
 
             .description-profile {
                 text-align: center;
-                padding: 0 20rem;
+                padding: 0 10rem;
 
             }
         }

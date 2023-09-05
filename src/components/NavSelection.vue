@@ -31,7 +31,8 @@ export default {
 <template>
     <div class="list-group">
         <li class="d-flex">
-            <a href="#" class="list-group-item list-group-item-action" aria-current="true" v-for="navLink in navLinks">
+            <a href="#" class="list-group-item list-group-item-action" aria-current="true" 
+            v-for="navLink in navLinks">
                 {{ navLink }}
             </a>
         </li>

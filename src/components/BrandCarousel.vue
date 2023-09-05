@@ -2,6 +2,12 @@
 
 export default {
 
+    data() {
+        return {
+
+        }
+    },
+
 }
 </script>
 
@@ -20,6 +26,9 @@ export default {
             </div>
             <div class="carousel-item ">
                 <img src="brand-04.png" class="d-block" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="brand-05.png" class="d-block" alt="">
             </div>
             <div class="carousel-item">
                 <img src="brand-05.png" class="d-block" alt="">
@@ -44,39 +53,39 @@ export default {
 
 .carousel-item {
 
-padding-top: 4rem;
+    padding-top: 4rem;
 
 }
 
 .shop-btn {
-position: absolute;
-padding: 0.4rem 1.5rem;
-z-index: 5;
-bottom: 26%;
-right: 30%;
-border-radius: 0;
-background-color: white;
-border-color: white;
-color: black;
+    position: absolute;
+    padding: 0.4rem 1.5rem;
+    z-index: 5;
+    bottom: 26%;
+    right: 30%;
+    border-radius: 0;
+    background-color: white;
+    border-color: white;
+    color: black;
 
-&:hover {
-    @include default-button
-}
+    &:hover {
+        @include default-button
+    }
 
-&:active {
-    @include default-button
-}
+    &:active {
+        @include default-button
+    }
 
 
 
 }
 
 button {
-opacity: 1;
+    opacity: 1;
 
-span {
-    font-size: 2.3rem;
-    color: $color-secondary
-}
+    span {
+        font-size: 2.3rem;
+        color: $color-secondary
+    }
 }
 </style>
