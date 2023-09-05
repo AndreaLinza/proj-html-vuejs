@@ -5,6 +5,27 @@ export default {
     data() {
         return {
 
+            img:[
+                {
+                    img_brand:"brand-01.png",
+                },
+                {
+                    img_brand:"brand-02.png",
+                },
+                {
+                    img_brand:"brand-03.png",
+                },
+                {
+                    img_brand:"brand-04.png",
+                },
+                {
+                    img_brand:"brand-05.png",
+                },
+                {
+                    img_brand:"brand-01.png",
+                },
+            ]
+
         }
     },
 
@@ -14,24 +35,12 @@ export default {
 
 <template>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner container ">
-            <div class="carousel-item active">
-                <img src="brand-01.png" class="d-block" alt="">
-            </div>
-            <div class="carousel-item">
-                <img src="brand-02.png" class="d-block" alt="">
-            </div>
-            <div class="carousel-item">
-                <img src="brand-03.png" class="d-block" alt="">
-            </div>
-            <div class="carousel-item ">
-                <img src="brand-04.png" class="d-block" alt="">
-            </div>
-            <div class="carousel-item">
-                <img src="brand-05.png" class="d-block" alt="">
-            </div>
-            <div class="carousel-item">
-                <img src="brand-05.png" class="d-block" alt="">
+        <div class="carousel-inner container"
+        v-for="(brand, index) in img"
+        :key="index">
+            <div class="carousel-item"
+            :class="{active : index === 0}">
+                <img :src="`${brand.img_brand}`" class="d-block w-25" alt="">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"

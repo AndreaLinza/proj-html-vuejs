@@ -26,10 +26,10 @@ export default {
 
 <template>
     <nav class="navbar navbar-expand-lg">
-        <div class="container py-2 px-1">
+        <div class="container justify-content-md-between py-2 px-1">
 
             <!-- Logo and hamburger -->
-            <div>
+            <div >
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">

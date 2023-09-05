@@ -39,14 +39,15 @@ export default {
 <template>
     <section class="container d-flex justify-content-around py-5">
 
-        <div v-for="service in bannerService" 
-        :class="`d-flex ${service.img}`">
-            <div class="service-img">
-                <img src="../assets/img/service-icon.png" alt="track">
-            </div>
-            <div class="d-flex flex-column text-start description">
-                <strong>{{ service.title }}</strong>
-                <span>{{ service.sub_title }}</span>
+        <div v-for="service in bannerService" :class="`${service.img}`">
+            <div class="d-flex">
+                <div class="service-img">
+                    <img src="../assets/img/service-icon.png" alt="track">
+                </div>
+                <div class="description">
+                    <strong class="w-100">{{ service.title }}</strong><br>
+                    <span class="">{{ service.sub_title }}</span>
+                </div>
             </div>
         </div>
 
@@ -62,6 +63,8 @@ section {
     font-family: $primary-font;
 
     .description {
+        width: 100%;
+
         &:hover {
             strong {
                 color: $color-secondary ;

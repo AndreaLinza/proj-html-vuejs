@@ -115,7 +115,7 @@ export default {
             <div class="d-flex justify-content-center"><span class="divider"></span></div>
         </div>
         <div class="container ">
-            <div class="slider row row-cols-3 g-4 mt-2">
+            <div class="slider row row-cols-lg-3 row-cols-md-1  g-4 mt-2">
                 <div v-for="(slide, i) in visibleSlide" :key="i">
                     <div class="category-card">
                         <img class="w-100" :src="`${slide.img_slide}`" alt="">

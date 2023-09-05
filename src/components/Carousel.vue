@@ -153,7 +153,7 @@ export default {
 
 <template>
     <div class="slider container">
-        <div class="slider row row-cols-4 g-4 mt-4">
+        <div class="slider row row-cols-lg-4 row-cols-md-2 g-4 mt-4">
             <div v-for="(product, i) in visibleProduct" :key="i">
                 <div class="category-card">
                     <div class="discount d-flex">

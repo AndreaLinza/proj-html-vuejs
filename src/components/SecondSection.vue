@@ -35,7 +35,7 @@ export default {
         <div class="container">
             <h2 class="text-center text-light mt-5 fw-bold fs-1">Special Category</h2>
             <div class="d-flex justify-content-center"><span class="divider"></span></div>
-            <div class="row row-cols-3 g-5">
+            <div class="row row-cols-lg-3 row-cols-md-1 g-5">
                 <div v-for="category in categorys">
                     <div class="category-card">
                         <img class="w-100" :src="`/${category.img_category}`" alt="">

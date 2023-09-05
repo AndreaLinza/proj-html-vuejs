@@ -81,25 +81,22 @@ export default {
                 <div class="col-3" v-for="title in FooterObj">
                     <h5 class="fw-bold pb-3">{{ title.title }}</h5>
                     <div class="d-flex position-relative" v-for="info in title.items">
-                        <i 
-                        v-if="info.icon" 
-                        :class="` lh-base ${info.icon} pe-3 `"
-                        style="color: #f9aa01; font-size: 15px;"></i>
+                        <i v-if="info.icon" :class="` lh-base ${info.icon} pe-3 `"
+                            style="color: #f9aa01; font-size: 15px;"></i>
                         <a href="#">{{ info.email }}</a>
                         <span class="pb-3">{{ info.contact }}</span>
                         <p> {{ info.info }}</p>
                         <span>{{ info.info_form }}</span>
 
-                        <div class="my-5 d-flex position-absolute top-50" v-if="info.info_form">
+                        <div class="form" v-if="info.info_form">
                             <input type="email" class="form-control border-0 rounded-0" id="exampleFormControlInput1"
-                            placeholder="">
+                                placeholder="">
                             <button type="button" class="btn btn-light rounded-0">
                                 <img src="public/newsletter.png" alt="">
                             </button>
                         </div>
                         <div v-for="icon in info.info_icon">
-                            <a href="#" class="position-relative bottom-0"><i 
-                                :class="`${icon} social`"></i></a>
+                            <a href="#" class="position-relative bottom-0"><i :class="`${icon} social`"></i></a>
                         </div>
 
                     </div>
@@ -132,17 +129,18 @@ export default {
 @use "../styles/partials/mixins" as *;
 
 footer {
+
     font-family: $secondary-font;
     background-image: url('public/footer-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
 
-    .social{
+    .social {
         padding: 0 .5rem;
-        margin-top: 5rem;
+        margin-top: 6rem;
     }
 
-    .col-3{
+    span{
         font-family: $primary-font;
         font-size: .9rem;
     }
@@ -150,6 +148,8 @@ footer {
     a {
         color: white;
         text-decoration: none;
+        font-family: $primary-font;
+        font-size: .9rem;
 
         &:hover {
             color: $color-secondary;
@@ -158,25 +158,21 @@ footer {
 
     p {
         margin-bottom: .8rem;
+        font-family: $primary-font;
+        font-size: .9rem;
+
         &:hover {
             color: $color-secondary;
         }
     }
 
-    .list-group {
-        border: 0;
-
-
-        .list-group-item {
-            background-color: transparent;
-            color: white;
-            border: 0;
-
-            &:hover {
-                color: $color-secondary;
-            }
-
-        }
+    .form {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        top: -20%;
+        right: -25%;
+        
     }
 
     .btn-light {
