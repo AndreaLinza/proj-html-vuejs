@@ -18,7 +18,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../styles/partials/variables' as *;
+@use 'src/styles/partials/_mixins.scss' as *;
 
 div{
     width: 300px;

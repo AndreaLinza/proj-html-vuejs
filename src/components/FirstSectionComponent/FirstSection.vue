@@ -51,7 +51,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@use "../styles/partials/mixins" as *;
+@use "src/styles/partials/_mixins.scss" as *;
 
 .banner-box {
     display: flex;

@@ -36,7 +36,7 @@ export default {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="../assets/img/logo.png" alt="">
+                    <img src="src/assets/img/logo.png" alt="">
                 </a>
             </div>
 
@@ -60,7 +60,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as *;
+@use "src/styles/partials/_mixins.scss" as *;
 
 
 .navbar {

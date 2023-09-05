@@ -43,7 +43,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/mixins" as *;
+@use "src/styles/partials/_mixins.scss" as *;
 
 
 

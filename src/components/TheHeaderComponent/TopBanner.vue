@@ -75,8 +75,8 @@ export default {
 
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as *;
-@use "../styles/partials/mixins";
+@use "src/styles/partials/_mixins.scss" as *;
+
 
 
 section {
@@ -119,10 +119,10 @@ section {
 
 
     .dropdown-menu {
-        @include mixins.dropdown-menu-default;
+        @include dropdown-menu-default;
 
         .dropdown-item {
-            @include mixins.dropdown-item-default;
+            @include dropdown-item-default;
 
             &:hover {
                 color: $color-secondary;

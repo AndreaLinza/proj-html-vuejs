@@ -1,6 +1,6 @@
 <script>
 import TopBanner from './TopBanner.vue';
-import Nav from './Nav.vue';
+import Nav from './NavComponent/Nav.vue';
 import JumboCarousel from './JumboCarousel.vue';
 
 
@@ -28,7 +28,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../src/styles/partials/variables" as *;
+@use "src/styles/partials/_mixins.scss" as *;
 
 header {
     background-color: $color-primary;

@@ -1,8 +1,8 @@
 <script>
-import FirstSection from "./FirstSection.vue";
+import FirstSection from "./FirstSectionComponent/FirstSection.vue";
 import SecondSection from "./SecondSection.vue";
-import ThirdSection from "./ThirdSection.vue";
-import FourthSection from "./FourthSection.vue";
+import ThirdSection from "./ThirdSectionComponent/ThirdSection.vue";
+import FourthSection from "./FourthSectionComponent/FourthSection.vue";
 import FifthSection from "./FifthSection.vue";
 import SixthSection from "./SixthSection.vue";
 

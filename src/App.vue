@@ -1,7 +1,7 @@
 <script>
 import ButtonUp from './ButtonUp.vue';
 import TheFooter from './components/TheFooter.vue';
-import TheHeader from './components/TheHeader.vue';
+import TheHeader from './components/TheHeaderComponent/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
 export default {
 

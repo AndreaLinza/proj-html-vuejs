@@ -43,7 +43,7 @@ export default {
             <div v-for="service in bannerService" :class="`${service.img}`">
                 <div class="d-flex">
                     <div class="service-img">
-                        <img src="../assets/img/service-icon.png" alt="track">
+                        <img src="src/assets/img/service-icon.png" alt="track">
                     </div>
                     <div class="description">
                         <strong class="w-100">{{ service.title }}</strong><br>
@@ -58,7 +58,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as *;
+@use "src/styles/partials/_mixins.scss" as *;
 
 section {
     color: white;
