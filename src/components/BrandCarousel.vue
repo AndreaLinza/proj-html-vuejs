@@ -4,53 +4,77 @@ export default {
 
     data() {
         return {
+            currentIndex: 0,
+            itemsForPage: 5,
 
-            img:[
+            img: [
                 {
-                    img_brand:"brand-01.png",
+                    img_brand: "brand-01.png",
                 },
                 {
-                    img_brand:"brand-02.png",
+                    img_brand: "brand-02.png",
                 },
                 {
-                    img_brand:"brand-03.png",
+                    img_brand: "brand-03.png",
                 },
                 {
-                    img_brand:"brand-04.png",
+                    img_brand: "brand-04.png",
                 },
                 {
-                    img_brand:"brand-05.png",
+                    img_brand: "brand-05.png",
                 },
                 {
-                    img_brand:"brand-01.png",
+                    img_brand: "brand-01.png",
                 },
-            ]
+            ],
 
         }
+
     },
+    computed: {
+        visibleProduct() {
+            const startIndex = this.currentIndex;
+            const endIndex = startIndex + this.itemsForPage;
+            return this.img.slice(startIndex, endIndex);
+        }
+    },
+    methods: {
+        prevSlide() {
+            const maxPage = this.img.length - 5
+
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+            }
+        },
+        nextSlide() {
+            const maxPage = this.img.length - 5
+            if (this.currentIndex < maxPage) {
+                this.currentIndex++;
+            }
+        }
+    }
 
 }
 </script>
 
 
 <template>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner container"
-        v-for="(brand, index) in img"
-        :key="index">
-            <div class="carousel-item"
-            :class="{active : index === 0}">
-                <img :src="`${brand.img_brand}`" class="d-block w-25" alt="">
+    <div class="slider container">
+        <div class=" slider row row-cols-lg-4 row-cols-md-2 g-4 mt-4" v-for="(brand, index) in img" :key="index">
+            <div class="category-card " :class="{ active: index === 0 }">
+                <img :src="`${brand.img_brand} `" class="d-block" alt="">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button class="slider-control-prev" type="button" @click="prevSlide">
+            <span class="slider-control-prev-icon ">
+                <img src="arrow.png" alt="arrow">
+            </span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <button class="slider-control-next" type="button" @click="nextSlide">
+            <span class="slider-control-next-icon">
+                <img src="arrow.png" alt="arrow">
+            </span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
@@ -60,41 +84,84 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/mixins" as *;
 
-.carousel-item {
+.slider {
+    display: flex;
+    margin-bottom: 2rem;
+    color: white;
+    font-family: $secondary-font;
+    position: relative;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    transition: .5s;
 
-    padding-top: 4rem;
-
-}
-
-.shop-btn {
-    position: absolute;
-    padding: 0.4rem 1.5rem;
-    z-index: 5;
-    bottom: 26%;
-    right: 30%;
-    border-radius: 0;
-    background-color: white;
-    border-color: white;
-    color: black;
+    img {
+        padding: 0 2rem;
+    }
 
     &:hover {
-        @include default-button
+        .slider-control-prev {
+            display: block;
+        }
+
+        .slider-control-next {
+            display: block;
+        }
     }
 
-    &:active {
-        @include default-button
+    .slider-control-prev {
+        overflow: hidden;
+        background-color: transparent;
+        border: 0;
+        height: 40px;
+        width: 50px;
+        position: absolute;
+        top: 40%;
+        left: 0px;
+
+
+        img {
+
+            padding: 0;
+            transform: translateY(-45px);
+            transition: .5s;
+
+            &:hover {
+                transform: translateY(8px);
+                transition: .5s;
+            }
+        }
+    }
+
+    .slider-control-next {
+        overflow: hidden;
+        background-color: transparent;
+        border: 0;
+        height: 40px;
+        width: 50px;
+        position: absolute;
+        top: 40%;
+        right: -5px;
+
+
+        img {
+            transform: translate(-85px, -45px);
+
+            transition: .5s;
+
+            &:hover {
+                transform: translate(-85px, 0);
+                transition: .5s;
+            }
+        }
+
+    }
+
+    .category-card {
+
+        position: relative;
     }
 
 
 
-}
-
-button {
-    opacity: 1;
-
-    span {
-        font-size: 2.3rem;
-        color: $color-secondary
-    }
 }
 </style>

@@ -170,8 +170,8 @@ footer {
         display: flex;
         position: absolute;
         width: 100%;
-        top: -20%;
-        right: -25%;
+        top: 155%;
+        right: 0;
         
     }
 
