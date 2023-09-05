@@ -38,15 +38,17 @@ export default {
 
 <template>
     <section class="container d-flex justify-content-around py-5">
+        <div class="row row-cols-lg-4 row-cols-md-2 g-3">
 
-        <div v-for="service in bannerService" :class="`${service.img}`">
-            <div class="d-flex">
-                <div class="service-img">
-                    <img src="../assets/img/service-icon.png" alt="track">
-                </div>
-                <div class="description">
-                    <strong class="w-100">{{ service.title }}</strong><br>
-                    <span class="">{{ service.sub_title }}</span>
+            <div v-for="service in bannerService" :class="`${service.img}`">
+                <div class="d-flex">
+                    <div class="service-img">
+                        <img src="../assets/img/service-icon.png" alt="track">
+                    </div>
+                    <div class="description">
+                        <strong class="w-100">{{ service.title }}</strong><br>
+                        <span class="">{{ service.sub_title }}</span>
+                    </div>
                 </div>
             </div>
         </div>

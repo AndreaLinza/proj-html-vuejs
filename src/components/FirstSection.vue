@@ -34,7 +34,7 @@ export default {
     <ServiceBanner></ServiceBanner>
 
     <section class="container my-5">
-        <div class="banner-box ">
+        <div class="banner-box">
             <div class="banner-img"
             v-for="slider in sliders">
                 <img :src="`${slider.img_slider}`" alt="">
