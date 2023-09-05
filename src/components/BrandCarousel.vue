@@ -86,6 +86,7 @@ export default {
 
 .slider {
     display: flex;
+    justify-content: space-around;
     margin-bottom: 2rem;
     color: white;
     font-family: $secondary-font;
