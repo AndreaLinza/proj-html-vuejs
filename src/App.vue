@@ -2,7 +2,7 @@
 import ButtonUp from './ButtonUp.vue';
 import TheFooter from './components/TheFooter.vue';
 import TheHeader from './components/TheHeaderComponent/TheHeader.vue';
-import TheMain from './components/TheMain.vue';
+import TheMain from './components/MainComponent/TheMain.vue';
 export default {
 
   components: {
@@ -26,7 +26,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../src/styles/partials/mixins" as *;
+@use "src/styles/partials/_mixins.scss" as *;
 
 
 </style>

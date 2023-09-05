@@ -72,12 +72,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/mixins" as *;
+@use "src/styles/partials/_mixins.scss" as *;
 
 
 section {
     background-position: 10%;
-    background-image: url('../assets/img/parallax.jpg');
+    background-image: url('src/assets/img/parallax.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
