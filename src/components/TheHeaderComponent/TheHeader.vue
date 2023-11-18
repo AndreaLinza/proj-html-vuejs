@@ -1,5 +1,4 @@
 <script>
-import TopBanner from './TopBanner.vue';
 import Nav from './NavComponent/Nav.vue';
 import JumboCarousel from './JumboCarousel.vue';
 
@@ -8,7 +7,6 @@ export default {
 
     components: {
         JumboCarousel,
-        TopBanner,
         Nav,
     },
 
@@ -21,7 +19,6 @@ export default {
 
 <template>
     <header>
-        <TopBanner></TopBanner>
         <Nav></Nav>
         <JumboCarousel></JumboCarousel>
     </header>

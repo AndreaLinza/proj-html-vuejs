@@ -55,7 +55,7 @@ export default {
                             </small>
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu ">
                             <li v-for="contact in contacts">
                                 <a class="dropdown-item" href="#">
                                     <i :class="`fa-solid ${contact.icon}`"></i>

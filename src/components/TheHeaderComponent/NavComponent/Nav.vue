@@ -2,6 +2,7 @@
 
 import DropDownRight from './DropDownRight.vue';
 import NavSelection from './NavSelection.vue';
+import TopBanner from '../TopBanner.vue';
 
 
 export default {
@@ -9,6 +10,7 @@ export default {
     components: {
         DropDownRight,
         NavSelection,
+        TopBanner,
     },
 
     data() {
@@ -26,6 +28,7 @@ export default {
 
 <template>
     <nav class="navbar navbar-expand-lg">
+        <TopBanner></TopBanner>
         <div class="container justify-content-md-between py-2 px-1">
 
             <!-- Logo and hamburger -->
